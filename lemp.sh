@@ -18,7 +18,7 @@ service nginx restart
 add-apt-repository ppa:chris-lea/redis-server
 add-apt-repository ppa:ondrej/php5-5.6
 apt-get update
-apt-get install -y redis-server php5-redis
+apt-get install -y redis-server php5-redis php5-memcached memcached
 apt-get -y install mysql-server-5.6 mysql-client-5.6
 apt-get install -y php5-mysql php5-fpm php5-gd php5-cli
 
