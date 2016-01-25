@@ -25,7 +25,7 @@ apt-get install -y php5-mysql php5-fpm php5-gd php5-cli
 sed -i "s/^;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php5/fpm/php.ini
 sed -i "s/^;listen.owner = www-data/listen.owner = www-data/" /etc/php5/fpm/pool.d/www.conf
 sed -i "s/^;listen.group = www-data/listen.group = www-data/" /etc/php5/fpm/pool.d/www.conf
-sed -i "s/^;listen.mode = 0660/listen.mode = 0660/" /etc/php5/fpm/pool.d/www.conf
+sed -i "s/^;listen.mode = 0660/listen.mode = 0666/" /etc/php5/fpm/pool.d/www.conf
 
 service nginx restart
 service mysql restart
