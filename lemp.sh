@@ -32,6 +32,6 @@ service mysql restart
 service php5-fpm restart
 
 cd /usr/html
-wget https://www.adminer.org/static/download/4.2.3/adminer-4.2.3-en.php
+wget https://www.adminer.org/static/download/4.2.4/adminer-4.2.4-en.php
 mv adminer-4.2.3-en.php dba.php
 sudo mysql_secure_installation
