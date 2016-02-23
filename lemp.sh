@@ -15,11 +15,9 @@ sysv-rc-conf nginx on
 chkconfig nginx on
 service nginx restart
 
-add-apt-repository ppa:chris-lea/redis-server
-add-apt-repository ppa:ondrej/php5-5.6
 apt-get update
 apt-get install -y redis-server php5-redis php5-memcached memcached php5-memcache
-apt-get -y install mysql-server-5.6 mysql-client-5.6
+apt-get -y install mysql-server mysql-client
 apt-get install -y php5-mysql php5-fpm php5-gd php5-cli
 
 sed -i "s/^;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php5/fpm/php.ini
@@ -33,5 +31,5 @@ service php5-fpm restart
 
 cd /usr/html
 wget https://www.adminer.org/static/download/4.2.4/adminer-4.2.4-en.php
-mv adminer-4.2.3-en.php dba.php
+mv adminer-4.2.4-en.php dba.php
 sudo mysql_secure_installation
