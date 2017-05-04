@@ -24,7 +24,6 @@ apt-get update
 apt-get install -y php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-fpm php7.0-gd php7.0-json php7.0-mysql php7.0-readline php7.0-mbstring
 apt-get -y install mariadb-server
 sudo apt-get install certbot
-certbot certonly --webroot -w /var/www/example.com -d example.com -d www.example.com
 
 sed -i "s/^;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
 sed -i "s/^;listen.owner = www-data/listen.owner = www-data/" /etc/php/7.0/fpm/pool.d/www.conf
@@ -39,3 +38,4 @@ cd /usr/html
 wget https://www.adminer.org/latest.php
 mv *.php dba.php
 sudo mysql_secure_installation
+certbot certonly --webroot -w /var/www/example.com -d example.com -d www.example.com
